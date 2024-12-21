@@ -13,31 +13,36 @@ Una aplicación web sencilla para gestionar tareas, construida con **React**, **
 
 ## Tecnologías Utilizadas
 
+- **Vite**: Herramienta para el empaquetado rápido y el servidor de desarrollo.
 - **React**: Biblioteca JavaScript para construir la interfaz de usuario.
 - **TypeScript**: Para tipar el código y mejorar la experiencia de desarrollo.
 - **TailwindCSS**: Utilizado para estilizar la aplicación de forma moderna y responsive.
+- **Lucide-React**: Biblioteca de íconos SVG para React, usada para los botones de la aplicación.
 - **localStorage**: Para almacenar las tareas de manera persistente entre sesiones.
 
-## Instalación
+
+### Instalación
 
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/to-do-list-app.git
+git clone https://github.com/BrayanMen/ToDoListChallenge.git
 
 ### 2. Navega al directorio del proyecto
 
 ```bash
-cd to-do-list-app
+cd ToDoAppChallenge
 
 
-### 3. Instala las dependencias
+## 3. Instala las dependencias
 
 ```bash
 npm install
 
 
-### 4. Inicia el servidor de desarrollo
+## 4. Inicia el servidor de desarrollo
 
 ```bash
 npm run dev
+
+La aplicación estará disponible en http://localhost:3000.
