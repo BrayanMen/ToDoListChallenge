@@ -1,6 +1,6 @@
 # To-Do List App
 
-Una aplicación web sencilla para gestionar tareas, construida con **React**, **TypeScript**, y **TailwindCSS**. Permite agregar, marcar como completadas, eliminar y editar tareas. Además, guarda el estado de las tareas en el almacenamiento local del navegador para persistir entre sesiones y tienen modo oscuro.
+Una aplicación web sencilla para gestionar tareas, construida con **Vite,** **React**, **TypeScript**, y **TailwindCSS**. Permite agregar, marcar como completadas, eliminar y editar tareas. Además, guarda el estado de las tareas en el almacenamiento local del navegador para persistir entre sesiones y tienen modo oscuro.
 
 ## Características
 
@@ -20,12 +20,11 @@ Una aplicación web sencilla para gestionar tareas, construida con **React**, **
 - **Lucide-React**: Biblioteca de íconos SVG para React, usada para los botones de la aplicación.
 - **localStorage**: Para almacenar las tareas de manera persistente entre sesiones.
 
-
 ### Instalación
 
-### 1. Clona el repositorio
-
 ```bash
+
+1. Clona el repositorio
 git clone https://github.com/BrayanMen/ToDoListChallenge.git
 
 ### 2. Navega al directorio del proyecto
@@ -46,3 +45,8 @@ npm install
 npm run dev
 
 La aplicación estará disponible en http://localhost:3000.
+```
+
+## Despliegue
+
+[Link de Despliegue](https://to-do-list-challenge-plum.vercel.app/)
