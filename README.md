@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# To-Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web sencilla para gestionar tareas, construida con **React**, **TypeScript**, y **TailwindCSS**. Permite agregar, marcar como completadas, eliminar y editar tareas. Además, guarda el estado de las tareas en el almacenamiento local del navegador para persistir entre sesiones y tienen modo oscuro.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Agregar tareas**: Permite al usuario agregar nuevas tareas a la lista.
+- **Marcar como completadas**: Puedes marcar las tareas como completadas, lo que las muestra con un estilo tachado.
+- **Eliminar tareas**: Permite eliminar tareas de la lista.
+- **Editar tareas**: Las tareas pueden ser editadas, cambiando su texto.
+- **Persistencia en el almacenamiento local**: Las tareas se guardan en el `localStorage` para que persistan incluso después de actualizar la página o cerrar el navegador.
+- **Animaciones**: Las tareas tienen animaciones de entrada y salida al ser agregadas o eliminadas.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Biblioteca JavaScript para construir la interfaz de usuario.
+- **TypeScript**: Para tipar el código y mejorar la experiencia de desarrollo.
+- **TailwindCSS**: Utilizado para estilizar la aplicación de forma moderna y responsive.
+- **localStorage**: Para almacenar las tareas de manera persistente entre sesiones.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 1. Clona el repositorio
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```bash
+git clone https://github.com/tu-usuario/to-do-list-app.git
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 2. Navega al directorio del proyecto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```bash
+cd to-do-list-app
+
+
+### 3. Instala las dependencias
+
+```bash
+npm install
+
+
+### 4. Inicia el servidor de desarrollo
+
+```bash
+npm run dev
