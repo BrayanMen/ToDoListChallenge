@@ -1,11 +1,12 @@
 # To-Do List App
 
-Una aplicación web sencilla para gestionar tareas, construida con **Vite,** **React**, **TypeScript**, y **TailwindCSS**. Permite agregar, marcar como completadas, eliminar y editar tareas. Además, guarda el estado de las tareas en el almacenamiento local del navegador para persistir entre sesiones y tienen modo oscuro.
+Una aplicación web sencilla para gestionar tareas, construida con **Vite,** **React**, **TypeScript**, y **TailwindCSS**. Permite agregar, marcar como completadas, eliminar y editar tareas. Además, guarda el estado de las tareas en el almacenamiento local del navegador para persistir entre sesiones, filtrar tareas por estados( completo, pendiente o todas) y tienen modo oscuro.
 
 ## Características
 
 - **Agregar tareas**: Permite al usuario agregar nuevas tareas a la lista.
 - **Marcar como completadas**: Puedes marcar las tareas como completadas, lo que las muestra con un estilo tachado.
+- **Filtrar tareas:** Te permite filtrar las tareas segun su estado ( Completo, Pendiente o Todas)
 - **Eliminar tareas**: Permite eliminar tareas de la lista.
 - **Editar tareas**: Las tareas pueden ser editadas, cambiando su texto.
 - **Persistencia en el almacenamiento local**: Las tareas se guardan en el `localStorage` para que persistan incluso después de actualizar la página o cerrar el navegador.

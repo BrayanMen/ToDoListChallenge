@@ -15,6 +15,8 @@ const App: React.FC = () => {
     }
   });
 
+  const [filter, setFilter] = useState<"all" | "completed"| "pending">('all');
+
   useEffect(() => {
     try {
       localStorage.setItem('todos', JSON.stringify(todos));
@@ -48,16 +50,42 @@ const App: React.FC = () => {
     );
   };
 
+  const todoFilter = todos.filter((todo) => {
+    if (filter === 'completed') return todo.completed;
+    if (filter === 'pending') return !todo.completed;
+    return true;
+  });
+
   return (
     <div className="min-h-screen bg-gray-200 dark:bg-gray-900 p-8">
       <ThemeDarkLight />
       <div className="max-w-md mx-auto">
-        <h1 className="text-2xl font-bold mb-4 text-center text-gray-800 dark:text-white">
+        <h1 className="text-2xl font-bold mb-4 text-center shadow-xl text-gray-800 dark:text-white">
           To-Do List
         </h1>
         <TodoForm onAdd={addTodo} />
+        <div className="flex justify-center space-x-2 my-4">
+          <button 
+            onClick={() => setFilter('all')} 
+            className={`px-4 py-2 font-semibold rounded-md ${filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-300 hover:bg-blue-500 hover:text-white'}`}
+          >
+            Todas
+          </button>
+          <button 
+            onClick={() => setFilter('pending')} 
+            className={`px-4 py-2 font-semibold rounded-md ${filter === 'pending' ? 'bg-yellow-500 text-white' : 'bg-gray-300 hover:bg-yellow-500 hover:text-white'}`}
+          >
+            Pendientes
+          </button>
+          <button 
+            onClick={() => setFilter('completed')} 
+            className={`px-4 py-2 font-semibold rounded-md ${filter === 'completed' ? 'bg-green-500 text-white' : 'bg-gray-300 hover:bg-green-500 hover:text-white'}`}
+          >
+            Completadas
+          </button>
+        </div>
         <TodoList
-          todos={todos}
+          todos={todoFilter}
           onToggle={toggleTodo}
           onDelete={deleteTodo}
           onEdit={editTodo}
